@@ -23,6 +23,7 @@ if (!isset($_SESSION['username'])) {
             <li><a href="map.php">Map</a></li>
             <li><a href="notifications.php">Notifications</a></li>
             <li><a href="settings.php">Settings</a></li>
+            <li><a href="beacons.php">Beacons</a></li>
           </ul>
       </nav>
       <nav class="nav" id="user_acc"><li><ul><a class="active" href="account.php"><?php echo $_SESSION['username']; ?></a></ul></li></nav>
