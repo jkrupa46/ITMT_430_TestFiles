@@ -57,7 +57,13 @@ header li a {
   height: 0px;
 }
 
-
+#user_acc{
+  text-align: right;
+  position: absolute;
+  top: 25px;
+  height: 0px;
+  right: 130px;
+}
 
 /*Background Color and Font Stacks*/
 
@@ -198,3 +204,88 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
   
+/* Pop-up Forms */
+
+.chg_btn {
+  background-color: #4ae962;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.85;
+  border-radius: 30px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 200px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #4E5D6A;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0px 2px 5px 1px #1d2329;
+  position:fixed;
+  width:300px;
+  height:250px;
+  top:40%;
+  left:50%;
+  margin-top:-140px;
+  margin-left:-175px;
+  border-radius:3px;
+}
+
+/* The Close Button */
+.close {
+  color: #4ae962;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+label {
+  display: inline-block;
+  margin-left:10px;
+  padding-top:10px;
+}
+
+input[type=text]{
+  color: #0f0524;
+  padding-left: 10px;
+  margin: 8px;
+  margin-top: 10px;
+  width: 270px;
+  height: 35px;
+  font-size: 12px;
+}
+
+#chg_btn_final{
+  width: 180px;
+  margin: 0 auto;
+  margin-left: 60px;
+  margin-top: 20px;
+  background-color: #4ae962;
+  color: white;
+  border: none;
+  height: 50px;
+  border-radius: 30px;
+}

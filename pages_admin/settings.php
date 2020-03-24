@@ -26,6 +26,7 @@
             <li><a href="beacons.php">Beacons</a></li>
           </ul>
       </nav>
+      <nav class="nav" id="user_acc"><li><ul><a href="account.php"><?php echo $_SESSION['username']; ?></a></ul></li></nav>
       <nav class="nav" id="logout"><li><ul><a href="../logout.php">Logout</a></ul></li></nav>
     </header>
     <main>

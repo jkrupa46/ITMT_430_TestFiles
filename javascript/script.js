@@ -95,6 +95,35 @@ function add_beacon() {
   document.getElementById("beacons").insertRow(-1).innerHTML = '<tr><td><div class="custom-select"><select><option value="1">Truck 1</option><option value="2">Truck 2</option><option value="3">Truck 3</option><option value="4">Truck 4</option><option value="5">Truck 5</option></select></div></td><td><input type="text" id="beaconname" name="beaconname"></td><td><input type="text" id="beaconid" name="beaconid"></td></tr>'
 }
 
+/* Modal Popup */
+function pop_up(){
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
+
 /********************************************************************************************************/
 //SQL Stuff
 function connect_database(){
