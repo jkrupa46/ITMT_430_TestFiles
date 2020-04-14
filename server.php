@@ -59,4 +59,66 @@ if(isset($_POST['chg_btn_final'])){
             header("Refresh:0");
     }
 }
+
+if(isset($_POST['chg_btn_pass'])){
+
+        $pass_1 = mysqli_real_escape_string($con, $_POST['new_pass']);
+        $pass_2 = mysqli_real_escape_string($con, $_POST['comf_pass']);
+        $current_username = $_SESSION['username'];
+
+        if (empty($pass_1)) { array_push($errors, "New Password is Required"); }
+        if (empty($pass_2)) { array_push($errors, "Password Confirmation is Required"); }
+        if ($pass_1 != $pass_2) {
+                array_push($errors, "Passwords Do Not Match");
+                                            }
+
+      if (count($errors) == 0) {
+        $pass_md5 = md5($pass_1);
+            $query = "UPDATE customer SET password = '$pass_md5' WHERE username = '$current_username'";
+            mysqli_query($con, $query);
+
+            $_SESSION['success'] = "You have successfully changed your password";
+            header("Refresh:0");
+    }
+}
+
+if(isset($_POST['chg_btn_name'])){
+
+        $fname = mysqli_real_escape_string($con, $_POST['new_fname']);
+        $lname = mysqli_real_escape_string($con, $_POST['new_lname']);
+        $current_username = $_SESSION['username'];
+
+        if (empty($fname)) { array_push($errors, "First Name is Required"); }
+        if (empty($lname)) { array_push($errors, "Last Name is Required"); }
+                                            
+
+      if (count($errors) == 0) {
+            $query = "UPDATE customer SET first_name = '$fname', last_name = '$lname' WHERE username = '$current_username'";
+            mysqli_query($con, $query);
+
+            $_SESSION['success'] = "You have successfully changed your first and last name";
+            header("Refresh:0");
+    }
+}
+
+if(isset($_POST['chg_btn_phone'])){
+
+        $phone_1 = mysqli_real_escape_string($con, $_POST['new_phone']);
+        $phone_2 = mysqli_real_escape_string($con, $_POST['comf_phone']);
+        $current_username = $_SESSION['username'];
+
+        if (empty($phone_1)) { array_push($errors, "New Phone Number is Required"); }
+        if (empty($phone_2)) { array_push($errors, "Phone Number Confirmation is Required"); }
+        if ($pass_1 != $pass_2) {
+                array_push($errors, "Phone Numbers Do Not Match");
+                                            }
+
+      if (count($errors) == 0) {
+            $query = "UPDATE customer SET phone = '$phone_1' WHERE username = '$current_username'";
+            mysqli_query($con, $query);
+
+            $_SESSION['success'] = "You have successfully changed your phone number";
+            header("Refresh:0");
+    }
+}
 ?>

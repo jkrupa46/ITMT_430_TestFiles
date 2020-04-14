@@ -1,9 +1,9 @@
 <?php
-  session_start();
+include "../server.php";
 
-  if (!isset($_SESSION['username'])) {
-        header('location: ../index.php');
-  }
+if (!isset($_SESSION['username'])) {
+  header('location: ../index.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -45,8 +45,14 @@
             <td><input type="email" id="email" name="email"></td>
             <td><input type="tel" id="phonenumber" name="phonenumber"></td>
             <td>
-              <input type="checkbox" name="email" value="email"><label for="email">Email</label>
-              <input type="checkbox" name="sms" value="sms"><label for="sms">SMS</label>
+              <label class="container">Email
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container">SMS
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
             </td>
             <td>
               <label class="switch">

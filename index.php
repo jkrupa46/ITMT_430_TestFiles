@@ -54,7 +54,7 @@ if(isset($_POST['login'])){
     <script src="https://www.vantajs.com/dist/vanta.net.min.js"></script>
   </head>
   <body id="vantajs">
-    <script src="javascript/script.js"></script>
+    <script src="javascript/script.js" async></script>
       <div class="container">
         <form action="" method="POST">
           <label for="username">Username</label>
