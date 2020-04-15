@@ -96,13 +96,13 @@ function find_latest_gps_data($json_meth){
   global $return_speed;
   global $return_lat;
   global $size;
-  for($i=1;$i<$size-1;$i++){
-      $return_speed=round($json_meth['data'][$i]['payload']['position']['speed'],2);
+  for($i=0;$i<$size-1;$i++){
+      $return_speed=round($json_meth['data'][$i]['payload']['speed'],2);
       echo $return_speed;
-      $return_lat=round($json_meth['data'][$i]['payload']['position']['lat'],5);
-      echo "\n"."<td>".$return_lat."</td>";
-      $return_long=round($json_meth['data'][$i]['payload']['position']['long'],5);
-      echo "<td>".$return_long."</td>"; 
+      $return_lat=round($json_meth['data'][$i]['payload']['lat'],5);
+      echo "<td id=lat_map_data>".$return_lat."</td>";
+      $return_long=round($json_meth['data'][$i]['payload']['long'],5);
+      echo "<td id=long_map_data>".$return_long."</td>"; 
       break;
     }
   }

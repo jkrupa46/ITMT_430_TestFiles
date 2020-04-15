@@ -40,17 +40,17 @@ if (!isset($_SESSION['username'])) {
             <th>Enable</th>
           </tr>
           <tr>
-            <td><input type="text" id="firstname" name="firstname"></td>
-            <td><input type="text" id="lastname" name="lastname"></td>
-            <td><input type="email" id="email" name="email"></td>
-            <td><input type="tel" id="phonenumber" name="phonenumber"></td>
+            <td><input type="text" id="firstname" name="firstname" aria-label="First Name"></td>
+            <td><input type="text" id="lastname" name="lastname" aria-label="Last Name"></td>
+            <td><input type="email" id="email" name="email" aria-label="Email"></td>
+            <td><input type="tel" id="phonenumber" name="phonenumber" aria-label="Phone Number">></td>
             <td>
               <label class="container">Email
-                <input type="checkbox">
+                <input type="checkbox" aria-label="Toggle Email Notification">
                 <span class="checkmark"></span>
               </label>
               <label class="container">SMS
-                <input type="checkbox">
+                <input type="checkbox" aria-label="Toggle SMS Notification">
                 <span class="checkmark"></span>
               </label>
             </td>

@@ -47,16 +47,17 @@ if (!isset($_SESSION['username'])) {
         <tr>
           <td><?php getbeaconids($json_blue);?></td>
           <td><?php math_on_meth($json_blue);?></td>
-          <td><?php find_latest_gps_data($json_blue)?></td>
+          <td><?php find_latest_gps_data($json_blue);?></td>
         </tr>
         <tr>
           <td><?php getbeaconids($json_green);?></td>
           <td><?php math_on_meth($json_green);?></td>
-          <td><?php find_latest_gps_data($json_green)?></td>
+          <td><?php find_latest_gps_data($json_green);?></td>
         </tr>
       </thead>
     </table>
     <div id="map">
+      <script src="../javascript/test.js" async></script>
       <script src="../javascript/map.js" async></script>
     </div>
     <input class="button" type="button" value=" Add " onclick="update_conditions()">

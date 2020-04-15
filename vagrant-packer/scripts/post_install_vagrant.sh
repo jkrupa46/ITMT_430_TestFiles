@@ -69,7 +69,7 @@ sudo touch /etc/apache2/sites-available/untitledlogistics.com.conf
 
 sudo echo "<VirtualHost 192.168.33.10:80>
 ServerName www.untitledlogistics1.com
-Redirect permanent / https://192.168.33.10/
+Redirect permanent / https://192.168.33.10
 </VirtualHost>
 
 <VirtualHost 192.168.33.10:443>

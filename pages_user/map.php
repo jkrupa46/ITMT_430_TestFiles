@@ -49,7 +49,7 @@ if (!isset($_SESSION['username'])) {
         <tr>
           <td><?php getbeaconids($json_blue);?></td>
           <td><?php math_on_meth($json_blue);?></td>
-          <td><?php find_latest_gps_data($json_blue)?>;</td>
+          <td><?php find_latest_gps_data($json_blue);?></td>
         </tr>
         <tr>
           <td><?php getbeaconids($json_green);?></td>
