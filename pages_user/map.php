@@ -5,10 +5,11 @@ if (!isset($_SESSION['username'])) {
   header('location: ../index.php');
 }
 ?>
+<?php include("../fetch.php");?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?php include("../fetch.php");?>
     <meta charset="utf-8">
     <title>User Page - Map</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -37,6 +38,7 @@ if (!isset($_SESSION['username'])) {
     <div id="map">
       <script src="../javascript/map.js"></script>
     </div>
+    <script src="../javascript/test.js"></script>
     <table id="conditions">
       <thead>
         <tr>
@@ -63,7 +65,6 @@ if (!isset($_SESSION['username'])) {
     <footer>
       <p><a href="mailto:akukuc@hawk.iit.edu">Email: akukuc@hawk.iit.edu</a></p>
       <p><a href="https://github.com/">Team4-2020r</a></p>
-      <script src="../javascript/script.js"></script>
     </footer>
   </body>
 </html>

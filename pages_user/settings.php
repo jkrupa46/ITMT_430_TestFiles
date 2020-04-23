@@ -40,7 +40,7 @@ if (!isset($_SESSION['username'])) {
           <tr>
             <td>
             <div class="select-style">
-                <select>
+                <select aria-label="Truck Number">
                   <option value="1">Truck 1</option>
                   <option value="2">Truck 2</option>
                   <option value="3">Truck 3</option>
@@ -51,7 +51,7 @@ if (!isset($_SESSION['username'])) {
             </td>
             <td>
               <div class="select-style">
-                <select>
+                <select class="select-style">
                   <option value="1">Data 1</option>
                   <option value="2">Data 2</option>
                   <option value="3">Data 3</option>
@@ -62,7 +62,7 @@ if (!isset($_SESSION['username'])) {
             </td>
             <td>
               <div class="select-style">
-                <select>
+                <select aria-label="Constraint Number">
                   <option value="1">Constraint 1</option>
                   <option value="2">Constraint 2</option>
                   <option value="3">Constraint 3</option>
@@ -71,7 +71,7 @@ if (!isset($_SESSION['username'])) {
                 </select>
               </div>
             </td>
-            <td><input type="number" id="value" name="value"></td>
+            <td><input type="number" id="value" name="value" aria-label="Value"></td>
           </tr>
         </table>
       </form>
