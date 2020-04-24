@@ -1,0 +1,66 @@
+/*Robert Bacius
+ *John Collins
+ *Jacob Krupa
+ *Andy Kukuc
+ *Geldi Omeri
+ */
+
+/*file will contain all css for map.html*/
+#map{
+  height:80%;
+  width:48%;
+  border:5px none #ffffff;
+  margin-top:20px;
+  margin-right:auto;
+  margin-left:1%;
+  position: relative;
+  float: left;
+  border-radius: 15px;
+  box-shadow: 0px 2px 5px 1px #1d2329;
+}
+
+/* Data Table CSS */
+#conditions{
+  position: relative;
+  width: 48%;
+  margin-top: 20px;
+  margin-right: 1%;
+  margin-left: auto;
+  float: right;
+  border-left-style: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 6px;
+  box-shadow: 0px 2px 5px 1px #1d2329;
+  background-color: #4E5D6A;
+}
+
+#conditions th{
+  padding: 20px;
+  background-color: #404E5A;
+}
+
+#conditions td{
+  padding:10px;
+  background-color: #4E5D6A;
+}
+
+.marker {
+  background-image: url('../images/icons8-truck.svg');
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
