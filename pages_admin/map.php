@@ -1,5 +1,6 @@
 <?php
-session_start();
+include "../server.php";
+include "../fetch.php";
 
 if (!isset($_SESSION['username'])) {
   header('location: ../index.php');
@@ -8,7 +9,6 @@ if (!isset($_SESSION['username'])) {
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?php include("../fetch.php");?>
     <meta charset="utf-8">
     <title>Administrative Page - Map</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -35,6 +35,10 @@ if (!isset($_SESSION['username'])) {
       <nav class="nav" id="logout"><li><ul><a href="../logout.php">Logout</a></ul></li></nav>
     </header>
     <main>
+    <div id="map">
+      <script src="../javascript/map.js"></script>
+    </div>
+    <script src="../javascript/test.js"></script>
     <table id="conditions">
       <thead>
         <tr>
@@ -56,10 +60,6 @@ if (!isset($_SESSION['username'])) {
         </tr>
       </thead>
     </table>
-    <div id="map">
-      <script src="../javascript/test.js" async></script>
-      <script src="../javascript/map.js" async></script>
-    </div>
     <input class="button" type="button" value=" Add " onclick="update_conditions()">
     </main>
     <footer>

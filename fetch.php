@@ -2,8 +2,8 @@
 /*Written By: Andy 'shad0wMaster' Kukuc*/
 
 /*secret file container*/
-  require_once __DIR__.'/../../vendor/autoload.php';
-  $dotenv=Dotenv\Dotenv::createImmutable(dirname(__DIR__).'../../');
+  require_once __DIR__.'/../vendor/autoload.php';
+  $dotenv=Dotenv\Dotenv::createImmutable(dirname(__DIR__).'/');
   $dotenv->load();
   /*load decryption key*/
   //$keycontents=file_get_contents('/usr/local/key');

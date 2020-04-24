@@ -88,3 +88,13 @@ sudo a2enmod ssl
 sudo a2ensite untitledlogistics.com.conf
 
 sudo systemctl restart apache2
+
+sudo echo "username='logistics-tracking-ayz'
+password='70210f093ae4df7947b8ccfe4a8181a8'" | sudo tee -a /var/www/.env 
+
+cd /var/www
+
+sudo apt-get install -y composer
+sudo composer require vlucas/phpdotenv
+
+sudo systemctl restart apache2

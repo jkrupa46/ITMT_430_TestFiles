@@ -1,11 +1,11 @@
 <?php
-session_start();
+include "../server.php";
+include "../fetch.php";
 
 if (!isset($_SESSION['username'])) {
   header('location: ../index.php');
 }
 ?>
-<?php include("../fetch.php");?>
 
 <!DOCTYPE html>
 <html lang="en">

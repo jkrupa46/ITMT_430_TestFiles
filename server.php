@@ -121,4 +121,29 @@ if(isset($_POST['chg_btn_phone'])){
             header("Refresh:0");
     }
 }
+
+if(isset($_POST['sqldump'])){
+
+        $uname1 = mysqli_real_escape_string($con,$_POST['current_us']);
+        $password_1 = mysqli_real_escape_string($con,$_POST['current_pass']);
+        $password_1 = md5($password);
+        
+        if ($uname != "" && $password != ""){
+                $sql_query = "select count(*) as cntUser from customer where username='".$uname."' and password='".$password."'";
+                $result = mysqli_query($con,$sql_query);
+                $row = mysqli_fetch_array($result);
+                $count = $row['cntUser'];
+                
+                if($count > 0){
+                        $filename = "backup-" . date("d-m-Y") . ".sql.gz";
+                        $mime = "application/x-gzip";
+                        
+                        header( "Content-Type: " . $mime );
+                        header( 'Content-Disposition: attachment; filename="' . $filename . '"' );
+                        $dump = "mysqldump -u $user --password=$password $dbname | gzip --best";   
+                        
+                        passthru($dump);
+                }
+        }
+}
 ?>

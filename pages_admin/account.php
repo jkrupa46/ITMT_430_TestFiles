@@ -89,6 +89,19 @@ if (!isset($_SESSION['username'])) {
           <button  type="submit" class="chg_btn_final" id="chg_btn_phone" name="chg_btn_phone">Change Phone Number</button>
         </form>
       </div>
+      <button class="chg_btn" id="myBtn5" onclick="pop_up()">Database Dump</button>
+      <div id="myModal5" class="modal">
+        <form action="" method="POST" class="modal-content">
+          <span class="close5">&times;</span>
+          <label class="acct" for="current_us">Username</label>
+          <input class="acct" type="text" name="current_us" required>
+
+          <label class="acct" for="current_pass">Password</label>
+          <input class="acct" type="text" name="current_pass" required>
+          
+          <button  type="submit" class="chg_btn_final" id="sqldump" name="sqldump">Database Dump</button>
+        </form>
+      </div>
     </main>
     <footer>
         <p><a href="mailto:akukuc@hawk.iit.edu">Email: akukuc@hawk.iit.edu</a></p>
@@ -202,38 +215,38 @@ if (!isset($_SESSION['username'])) {
         }
       }
     </script>
+    <script>
+          // Get the modal
+      var modal5 = document.getElementById("myModal5");
+
+      // Get the button that opens the modal
+      var btn5 = document.getElementById("myBtn5");
+
+      // Get the <span> element that closes the modal
+      var span5 = document.getElementsByClassName("close5")[0];
+
+      // When the user clicks the button, open the modal 
+      btn5.onclick = function() {
+        modal5.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span5.onclick = function() {
+        modal5.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window5.onclick = function(event5) {
+        if (event5.target == modal5) {
+          modal5.style.display = "none";
+        }
+      }
+    </script>
     </main>
     <footer>
         <p><a href="mailto:akukuc@hawk.iit.edu">Email: akukuc@hawk.iit.edu</a></p>
         <p><a href="https://github.com/">Team4-2020r</a></p>
         <script src="../javascript/script.js"></script>
     </footer>
-    <script>
-          // Get the modal
-      var modal = document.getElementById("myModal");
-
-      // Get the button that opens the modal
-      var btn = document.getElementById("myBtn");
-
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
-
-      // When the user clicks the button, open the modal 
-      btn.onclick = function() {
-        modal.style.display = "block";
-      }
-
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function() {
-        modal.style.display = "none";
-      }
-
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      }
-    </script>
   </body>
 </html>
