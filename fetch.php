@@ -116,7 +116,7 @@ function find_latest_gps_data($json_meth){
     $return_lat=round($json_meth['data'][$i]['payload']['lat'],5);
     echo "<td id=lat_map_data>".$return_lat."</td>";
     $return_long=round($json_meth['data'][$i]['payload']['long'],5);
-    echo "<td id=long_map_data>".$return_long."</td>"; 
+    echo "<td id=long_map_data>".$return_long."</td>";
     break;
   }
 }

@@ -126,10 +126,10 @@ if(isset($_POST['sqldump'])){
 
         $uname1 = mysqli_real_escape_string($con,$_POST['current_us']);
         $password_1 = mysqli_real_escape_string($con,$_POST['current_pass']);
-        $password_1 = md5($password);
+        $password_1 = md5($password_1);
         
-        if ($uname != "" && $password != ""){
-                $sql_query = "select count(*) as cntUser from customer where username='".$uname."' and password='".$password."'";
+        if ($uname1 != "" && $password_1 != ""){
+                $sql_query = "select count(*) as cntUser from customer where username='".$uname1."' and password='".$password_1."'";
                 $result = mysqli_query($con,$sql_query);
                 $row = mysqli_fetch_array($result);
                 $count = $row['cntUser'];
@@ -143,6 +143,9 @@ if(isset($_POST['sqldump'])){
                         $dump = "mysqldump -u $user --password=$password $dbname | gzip --best";   
                         
                         passthru($dump);
+                }
+                else{
+                        array_push($errors, "Username or Password is Incorrect");
                 }
         }
 }

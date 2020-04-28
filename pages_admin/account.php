@@ -97,7 +97,7 @@ if (!isset($_SESSION['username'])) {
           <input class="acct" type="text" name="current_us" required>
 
           <label class="acct" for="current_pass">Password</label>
-          <input class="acct" type="text" name="current_pass" required>
+          <input class="acct" type="password" name="current_pass" required>
           
           <button  type="submit" class="chg_btn_final" id="sqldump" name="sqldump">Database Dump</button>
         </form>
