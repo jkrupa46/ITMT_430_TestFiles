@@ -40,7 +40,7 @@ if (!isset($_SESSION['username'])) {
           </tr>
           <tr>
             <td>
-              <div class="custom-select">
+              <div class="select-style">
                 <select>
                   <option value="1">Truck 1</option>
                   <option value="2">Truck 2</option>
@@ -51,7 +51,7 @@ if (!isset($_SESSION['username'])) {
               </div>
             </td>
             <td>
-              <div class="custom-select">
+              <div class="select-style">
                 <select>
                   <option value="1">Data 1</option>
                   <option value="2">Data 2</option>
@@ -62,7 +62,7 @@ if (!isset($_SESSION['username'])) {
               </div>
             </td>
             <td>
-              <div class="custom-select">
+              <div class="select-style">
                 <select>
                   <option value="1">Constraint 1</option>
                   <option value="2">Constraint 2</option>

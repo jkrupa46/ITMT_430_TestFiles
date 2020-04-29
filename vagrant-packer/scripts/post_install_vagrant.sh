@@ -98,3 +98,15 @@ sudo apt-get install -y composer
 sudo composer require vlucas/phpdotenv
 
 sudo systemctl restart apache2
+
+sudo echo "" | sudo tee -a /etc/mysql/mysql.cnf
+sudo echo "[mysqld]" | sudo tee -a /etc/mysql/mysql.cnf
+sudo echo "early-plugin-load=keyring_file.so" | sudo tee -a /etc/mysql/mysql.cnf
+
+sudo systemctl restart mysql
+
+cd ~/ITMO556
+
+mysql -u root -p$DBPASS < encryption.sql
+
+sudo systemctl restart mysql

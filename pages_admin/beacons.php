@@ -39,7 +39,7 @@ if (!isset($_SESSION['username'])) {
           </tr>
           <tr>
             <td>
-              <div class="custom-select">
+              <div class="select-style">
                 <select>
                   <option value="1">Truck 1</option>
                   <option value="2">Truck 2</option>

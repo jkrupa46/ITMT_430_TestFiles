@@ -11,3 +11,5 @@ CREATE TABLE customer (
   first_name    VARCHAR(255),
   phone         VARCHAR(25)
 );
+
+ALTER TABLE customer ENGINE=InnoDB;

@@ -408,6 +408,20 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 
+.close5 {
+  color: #4ae962;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close5:hover,
+.close5:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 label.acct {
   display: inline-block;
   margin-left:10px;

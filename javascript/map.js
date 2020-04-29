@@ -7,6 +7,7 @@
 //Here we will ask the user for current information\
 
 //Here the code will be housed for the maps page.
+
 mapboxgl.accessToken='pk.eyJ1IjoiYWt1a3VjIiwiYSI6ImNrNmt3MWZxcjA1anEzam4wOWNxeTgzaGgifQ.og9fg35Kib4vh_bdF4JUOg';
 var map=new mapboxgl.Map({
   container:'map',
@@ -68,3 +69,4 @@ new mapboxgl.Marker(el)
   .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
     .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
   .addTo(map);
+
